@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ranking App</title>
+    <link rel="stylesheet" href="/style.css" />
+    <style>
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <h1>Student Rankings - Beta Group</h1>
+
+    <!-- Search Form -->
+    <form action="/search" method="post">
+        <input type="text" name="seatNo" placeholder="Enter Seat No" required />
+        <button type="submit">Search</button>
+    </form>
+
+    <!-- Display searched student if exists -->
+    <div th:if="${student != null}">
+        <h2>Searched Student:</h2>
+        <table>
+            <tr>
+                <th>Seat No</th>
+                <th>Name</th>
+                <th>Marks</th>
+                <th>Rank</th>
+            </tr>
+            <tr>
+                <td th:text="${student.seatNo}"></td>
+                <td th:text="${student.name}"></td>
+                <td th:text="${student.marks}"></td>
+                <td th:text="${student.rank}"></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Display all students -->
+    <h2>All Students:</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Seat No</th>
+                <th>Name</th>
+                <th>Marks</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="student, iterStat : ${students}">
+                <td th:text="${iterStat.index + 1}"></td>
+                <td th:text="${student.seatNo}"></td>
+                <td th:text="${student.name}"></td>
+                <td th:text="${student.marks}"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Footer -->
+    <footer>
+        Developed by <strong>Beta Group</strong> of <strong>UBIT</strong> @drhumairatariq
+    </footer>
+</div>
+</body>
+
+</html>
