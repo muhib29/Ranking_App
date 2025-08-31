@@ -22,7 +22,7 @@
 - **Syed Muhib Farooq**
 - **Hasnian Saboor**
 - **Ali Shaikh**
-- **Dr. Humaira Tariq** – Guidance & Mentorship
+- **Dr. Humera Tariq** – Guidance & Mentorship
 
 ---
 
