@@ -9,13 +9,9 @@
 
 * [Contributors](#Contributors)
 * [Project Overview](#project-overview)
-* [Features](#features)
 * [Demo](#demo)
-* [CSV Example](#csv-example)
 * [Technologies Used](#technologies-used)
 * [Installation & Running](#installation--running)
-* [Acknowledgment](#acknowledgment)
-* [License](#license)
 
 ---
 
@@ -41,20 +37,10 @@ The app allows users to:
 
 It is designed to provide a **clean, responsive, and user-friendly interface**, perfect for viewing results on both desktop and mobile devices.
 
-The project was created as part of the **Object-Oriented Programming (OOP) course** under **Dr. Humaira Tariq**, Department of Computer Science, UBIT.
+The project was created as part of the **Object-Oriented Programming (OOP) course** under **Dr. Humera Tariq**, Department of Computer Science, UBIT.
 
 ---
 
-## Features
-
-* Search students by Seat Number
-* Automatically assigns **Rank** based on CSV order
-* Responsive UI for desktop and mobile
-* Mobile-friendly cards to display student results
-* No need to display all students—privacy-focused
-* Clean and modern design
-
----
 
 ## Demo
 
@@ -67,24 +53,6 @@ You can view the live project here:
 ## CSV Example
 
 The application reads data from a **CSV file (`results.csv`)** stored in `src/main/resources/`.
-
-**Sample CSV format**:
-
-```csv
-University of Karachi
-S.no,Seat no,Name,Marks,Seat no
-1,B24110006143,Syed Muhammad Ashad Matlub,19,1
-2,B24110006131,Sheikh Anas Rashid,18.5,2
-3,B24110006146,Syed Muhib Farooq,18,3
-4,B24110006051,Hasnian Saboor,17.5,4
-5,B24110006019,Ali Shaikh,17,5
-```
-
-**Notes:**
-
-* First two lines are skipped automatically.
-* Rank is calculated from 1 onwards based on CSV order.
-* Only the **search result** is displayed in the UI.
 
 ---
 
@@ -119,24 +87,3 @@ cd Ranking_App
 ```
 http://localhost:8080
 ```
-
----
-
-## Usage
-
-1. Enter the **Seat Number** in the input field.
-2. Click **Search**.
-3. Student details including **Name, Marks, and Rank** will appear in a card below.
-
----
-
-## Acknowledgment
-
-Special thanks to **Dr. Humaira Tariq**, OOP course instructor, for guidance and support.
-This project was developed by **Beta Group of UBIT**.
-
----
-
-## License
-
-This project is **open-source** for educational purposes.

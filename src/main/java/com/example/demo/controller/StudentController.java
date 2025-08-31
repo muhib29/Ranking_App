@@ -3,8 +3,6 @@ package com.example.demo.controller;
 import com.example.demo.model.Student;
 import com.example.demo.service.StudentService;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -16,12 +14,6 @@ public class StudentController {
 
     public StudentController(StudentService studentService) {
         this.studentService = studentService;
-    }
-
-    // GET /api/students → List all students
-    @GetMapping
-    public List<Student> getAllStudents() {
-        return studentService.getAllStudents();
     }
 
     // GET /api/students/{seatNo} → Get details by seat number

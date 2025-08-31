@@ -6,11 +6,11 @@ public class Student {
     private double marks;
     private String rank;
 
-    // ✅ Default Constructor (needed by Spring & frameworks)
+    // Default Constructor (needed by Spring & frameworks)
     public Student() {
     }
 
-    // ✅ Parameterized Constructor
+    //  Parameterized Constructor
     public Student(String seatNo, String name, double marks, String rank) {
         this.seatNo = seatNo;
         this.name = name;
@@ -18,7 +18,7 @@ public class Student {
         this.rank = rank;
     }
 
-    // ✅ Getters & Setters
+    // Getters & Setters
     public String getSeatNo() {
         return seatNo;
     }
