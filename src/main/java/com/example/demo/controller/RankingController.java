@@ -19,17 +19,15 @@ public class RankingController {
 
     @GetMapping("/")
     public String showRanking(Model model) {
-        List<Student> students = studentService.getAllStudents();
-        model.addAttribute("students", students);
-        return "index";
+        model.addAttribute("students", studentService.getAllStudents());
+        return "index"; // <-- points to src/main/resources/templates/index.html
     }
 
-   @PostMapping("/search")
-public String searchStudent(@RequestParam String seatNo, Model model) {
-    Student student = studentService.getStudentBySeatNo(seatNo); // ✅ now works
-    model.addAttribute("student", student);
-    model.addAttribute("students", studentService.getAllStudents());
-    return "index";
-}
-
+    @PostMapping("/search")
+    public String searchStudent(@RequestParam String seatNo, Model model) {
+        Student student = studentService.getStudentBySeatNo(seatNo);
+        model.addAttribute("student", student);
+        model.addAttribute("students", studentService.getAllStudents());
+        return "index";
+    }
 }
