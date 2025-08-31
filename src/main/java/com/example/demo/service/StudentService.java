@@ -12,7 +12,7 @@ import java.util.List;
 @Service
 public class StudentService {
 
-    // Read all students from CSV
+    // Read all students and assign rank based on CSV order
     public List<Student> getAllStudents() {
         List<Student> students = new ArrayList<>();
 
@@ -20,28 +20,24 @@ public class StudentService {
                 new InputStreamReader(new ClassPathResource("results.csv").getInputStream()))) {
 
             String line;
-            boolean firstLine = true;
-            boolean secondLine = true;
+            boolean firstLine = true; // Skip header
+
+            int rankCounter = 1; // Start rank from 1
 
             while ((line = br.readLine()) != null) {
                 line = line.trim();
                 if (line.isEmpty()) continue;
-
-                if (firstLine) { firstLine = false; continue; }
-                if (secondLine) { secondLine = false; continue; }
+                if (firstLine) { firstLine = false; continue; } // skip CSV header
 
                 String[] fields = line.split(",");
                 if (fields.length < 4) continue;
 
                 String seatNo = fields[1].trim();
                 String name = fields[2].trim();
-
                 double marks = 0.0;
                 try { marks = Double.parseDouble(fields[3].trim()); } catch (Exception e) {}
 
-                String rank = (fields.length > 4 && !fields[4].trim().equalsIgnoreCase("None"))
-                        ? fields[4].trim()
-                        : "Rank below 8";
+                String rank = String.valueOf(rankCounter++); // auto increment rank
 
                 students.add(new Student(seatNo, name, marks, rank));
             }
