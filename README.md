@@ -4,13 +4,13 @@
 
 ---
 
-## Table of Contents
+## Table of Content
 
 
 * [Contributors](#Contributors)
 * [Project Overview](#project-overview)
 * [Demo](#demo)
-* [CSV Example](#CSV Example)
+* [CSV Example](#CSV-Example)
 * [Technologies Used](#technologies-used)
 * [Installation & Running](#installation--running)
 
