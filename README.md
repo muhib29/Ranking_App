@@ -10,6 +10,7 @@
 * [Contributors](#Contributors)
 * [Project Overview](#project-overview)
 * [Demo](#demo)
+* [CSV Example](#CSV Example)
 * [Technologies Used](#technologies-used)
 * [Installation & Running](#installation--running)
 
@@ -54,12 +55,24 @@ You can view the live project here:
 
 The application reads data from a **CSV file (`results.csv`)** stored in `src/main/resources/`.
 
+**Sample CSV format**:
+
+```csv
+University of Karachi
+S.no,Seat no,Name,Marks,Seat no
+1,B24110006143,Syed Muhammad Ashad Matlub,19,1
+2,B24110006131,Sheikh Anas Rashid,18.5,2
+3,B24110006146,Syed Muhib Farooq,18,3
+4,B24110006051,Hasnian Saboor,17.5,4
+5,B24110006019,Ali Shaikh,17,5
+```
+
 ---
 
 ## Technologies Used
 
 * **Backend:** Java, Spring Boot (REST APIs & MVC)
-* **Frontend:** HTML, CSS, Thymeleaf
+* **Frontend:** HTML, CSS and javaScript
 * **Deployment:** Railway.app (Free Hosting)
 * **CSV Processing:** Java `BufferedReader` & `ClassPathResource`
 
