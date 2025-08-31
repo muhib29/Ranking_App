@@ -44,3 +44,25 @@ tbody tr:nth-child(even) {
 tbody tr:hover {
     background-color: #eef2ff;
 }
+
+/* Make tables scrollable on small screens */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* Optional: smaller font on mobile */
+@media (max-width: 768px) {
+    table {
+        font-size: 14px;
+    }
+    input[type="text"] {
+        width: 65%;
+    }
+    button {
+        width: 30%;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+}

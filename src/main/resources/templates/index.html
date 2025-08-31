@@ -17,60 +17,61 @@
 </head>
 
 <body>
-<div class="container">
-    <h1>Student Rankings - Beta Group</h1>
+    <div class="container">
+        <h1>Student Rankings - Beta Group</h1>
 
-    <!-- Search Form -->
-    <form action="/search" method="post">
-        <input type="text" name="seatNo" placeholder="Enter Seat No" required />
-        <button type="submit">Search</button>
-    </form>
+        <!-- Search Form -->
+        <form action="/search" method="post">
+            <input type="text" name="seatNo" placeholder="Enter Seat No" required />
+            <button type="submit">Search</button>
+        </form>
 
-    <!-- Display searched student if exists -->
-    <div th:if="${student != null}">
+        <!-- Display searched student if exists -->
         <h2>Searched Student:</h2>
-        <table>
-            <tr>
-                <th>Seat No</th>
-                <th>Name</th>
-                <th>Marks</th>
-                <th>Rank</th>
-            </tr>
-            <tr>
-                <td th:text="${student.seatNo}"></td>
-                <td th:text="${student.name}"></td>
-                <td th:text="${student.marks}"></td>
-                <td th:text="${student.rank}"></td>
-            </tr>
-        </table>
+        <div th:if="${student != null}" class="table-responsive">
+            <table>
+                <tr>
+                    <th>Seat No</th>
+                    <th>Name</th>
+                    <th>Marks</th>
+                    <th>Rank</th>
+                </tr>
+                <tr>
+                    <td th:text="${student.seatNo}"></td>
+                    <td th:text="${student.name}"></td>
+                    <td th:text="${student.marks}"></td>
+                    <td th:text="${student.rank}"></td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Display all students -->
+        <div class="table-responsive">
+            <h2>All Students:</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Seat No</th>
+                        <th>Name</th>
+                        <th>Marks</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="student, iterStat : ${students}">
+                        <td th:text="${iterStat.index + 1}"></td>
+                        <td th:text="${student.seatNo}"></td>
+                        <td th:text="${student.name}"></td>
+                        <td th:text="${student.marks}"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- Footer -->
+        <footer>
+            Developed by <strong>Beta Group</strong> of <strong>UBIT</strong> @drhumairatariq
+        </footer>
     </div>
-
-    <!-- Display all students -->
-    <h2>All Students:</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Rank</th>
-                <th>Seat No</th>
-                <th>Name</th>
-                <th>Marks</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr th:each="student, iterStat : ${students}">
-                <td th:text="${iterStat.index + 1}"></td>
-                <td th:text="${student.seatNo}"></td>
-                <td th:text="${student.name}"></td>
-                <td th:text="${student.marks}"></td>
-            </tr>
-        </tbody>
-    </table>
-
-    <!-- Footer -->
-    <footer>
-        Developed by <strong>Beta Group</strong> of <strong>UBIT</strong> @drhumairatariq
-    </footer>
-</div>
 </body>
 
 </html>
