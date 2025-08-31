@@ -22,7 +22,7 @@ public class StudentService {
             String line;
             boolean firstLine = true; // Skip header
 
-            int rankCounter = 1; // Start rank from 1
+            int rankCounter = 0; // Start rank from 1
 
             while ((line = br.readLine()) != null) {
                 line = line.trim();
