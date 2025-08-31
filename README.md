@@ -6,6 +6,8 @@
 
 ## Table of Contents
 
+
+* [Contributors](#Contributors)
 * [Project Overview](#project-overview)
 * [Features](#features)
 * [Demo](#demo)
@@ -14,6 +16,17 @@
 * [Installation & Running](#installation--running)
 * [Acknowledgment](#acknowledgment)
 * [License](#license)
+
+---
+
+## Contributors
+
+- **Syed Muhammad Ashad Matlub**
+- **Sheikh Anas Rashid** 
+- **Syed Muhib Farooq**
+- **Hasnian Saboor**
+- **Ali Shaikh**
+- **Dr. Humaira Tariq** – Guidance & Mentorship
 
 ---
 
@@ -59,11 +72,12 @@ The application reads data from a **CSV file (`results.csv`)** stored in `src/ma
 
 ```csv
 University of Karachi
-B24110006143: Syed Muhammad Ashad Matlub
-B24110006131: Sheikh Anas Rashid
-B24110006146: Syed Muhib Farooq
-B24110006051: Hasnian Saboor
-B24110006019: Ali Shaikh
+S.no,Seat no,Name,Marks,Seat no
+1,B24110006143,Syed Muhammad Ashad Matlub,19,1
+2,B24110006131,Sheikh Anas Rashid,18.5,2
+3,B24110006146,Syed Muhib Farooq,18,3
+4,B24110006051,Hasnian Saboor,17.5,4
+5,B24110006019,Ali Shaikh,17,5
 ```
 
 **Notes:**
